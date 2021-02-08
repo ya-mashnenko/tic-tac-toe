@@ -70,10 +70,6 @@ ul {
   background: #ddd;
 }
 
-/* .game-info {
-  margin: auto;
-} */
-
 .button-container {
   margin: auto;
   grid-row: 2/2;
@@ -103,13 +99,6 @@ ul {
   background-color: #ff9b93;
   color: #ddd;
 }
-
-/* .move-buttons:focus,
-.history-button:focus {
-  background-color: #ff9b93;
-  color: #ddd;
-  outline: none;
-} */
 
 .history {
   list-style-type: none;
