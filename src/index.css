@@ -76,11 +76,6 @@ ul {
   grid-column: 2/2;
 }
 
-/* .history-button {
-  margin: auto;
-  margin-top: 30px;
-} */
-
 .move-buttons,
 .history-button {
   color: #ff9b93;
