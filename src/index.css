@@ -1,0 +1,116 @@
+body {
+  background-color: #5b5b5b;
+  font: 24px "Century Gothic", Futura, sans-serif;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: 300px auto 300px;
+  grid-template-rows: 100px 150px auto;
+}
+
+h1 {
+  color: #ff9b93;
+  margin: auto;
+  margin-top: 30px;
+  grid-column: 2 / 2;
+}
+
+.history-list {
+  margin: auto;
+  grid-row: 3/3;
+  grid-column: 1/1;
+}
+
+.game-board {
+  margin: auto;
+  margin-top: 50px;
+  grid-row: 3/3;
+  grid-column: 2/2;
+}
+
+ol,
+ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background-color: transparent;
+  float: left;
+  border: 2px solid #ff9b93;
+  /* border-radius: 5px; */
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 100px;
+  height: 100px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 100px;
+}
+
+.move-buttons:focus,
+.history-button:focus,
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+/* .game-info {
+  margin: auto;
+} */
+
+.button-container {
+  margin: auto;
+  grid-row: 2/2;
+  grid-column: 2/2;
+}
+
+/* .history-button {
+  margin: auto;
+  margin-top: 30px;
+} */
+
+.move-buttons,
+.history-button {
+  color: #ff9b93;
+  background-color: #5b5b5b;
+  border-color: #ff9b93;
+  /* border-radius: 5px; */
+  border-style: solid;
+  font: 18px "Century Gothic", Futura, sans-serif;
+  width: 140px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.move-buttons:hover,
+.history-button:hover {
+  background-color: #ff9b93;
+  color: #ddd;
+}
+
+/* .move-buttons:focus,
+.history-button:focus {
+  background-color: #ff9b93;
+  color: #ddd;
+  outline: none;
+} */
+
+.history {
+  list-style-type: none;
+}
