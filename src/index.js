@@ -4,7 +4,11 @@ import "./index.css";
 
 function Square(props) {
   return (
-    <button className="square" onClick={props.onClick}>
+    <button
+      className="square"
+      onClick={props.onClick}
+      style={{ color: props.value === "X" ? "LightPink" : "LemonChiffon" }}
+    >
       {props.value}
     </button>
   );
@@ -113,7 +117,6 @@ class Game extends React.Component {
     return (
       <div className="game">
         <h1>{status}</h1>
-        {/* <div className="game-info"> */}
         <div className="button-container">
           <button className="history-button" onClick={this.showHistoryButton}>
             {this.state.showHistory ? "Show history" : "Hide history"}
@@ -122,7 +125,6 @@ class Game extends React.Component {
         <div className="history-list">
           <ul className="history">{!this.state.showHistory ? moves : null}</ul>
         </div>
-        {/* </div> */}
         <div className="game-board">
           <Board
             squares={current.squares}
