@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { HistoryButton } from "./Buttons/History";
+import { NewGameButton } from "./Buttons/NewGame";
 import "./index.css";
 
 function Square(props) {
@@ -94,6 +96,19 @@ class Game extends React.Component {
     });
   };
 
+  startNewGame = () => {
+    this.setState({
+      history: [
+        {
+          squares: Array(9).fill(null),
+        },
+      ],
+      stepNumber: 0,
+      xIsNext: true,
+      showHistory: true,
+    });
+  };
+
   render() {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
@@ -118,9 +133,11 @@ class Game extends React.Component {
       <div className="game">
         <h1>{status}</h1>
         <div className="button-container">
-          <button className="history-button" onClick={this.showHistoryButton}>
-            {this.state.showHistory ? "Show history" : "Hide history"}
-          </button>
+          <HistoryButton
+            showHistoryButton={this.showHistoryButton}
+            showHistory={this.state.showHistory}
+          />
+          <NewGameButton startNewGame={this.startNewGame} />
         </div>
         <div className="history-list">
           <ul className="history">{!this.state.showHistory ? moves : null}</ul>
